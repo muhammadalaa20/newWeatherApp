@@ -37,7 +37,7 @@ function convert(){
     unit.textContent = 'Celsius!';
   }else{
     degree.textContent = '°C';
-    temp.textContent = (temp.textContent-32)*5/9;
+    temp.textContent = (temp.textContent- 32)*5/9;
     unit.textContent = 'Fehrenhite!';
   }
 }
