@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>weather</title>
+</head>
+<body>
+    <div class="nav">
+        <div id="time"></div>
+        <div id="date"></div>
+    </div>
+    
+    <div class="container">
+        <div class="weather">
+            <div class="weather__city">
+                <form id="city-form">
+                <label for="city">Enter your city name:</label>
+                <input type="text" id="city" name="city" placeholder=".e.g alexandria" required>
+                <button type="submit" value="Get Weather">Submit</button>
+                </form>
+                <p id="result"></p>
+            </div>
+            <div class="weather__temp">
+                <span id="temp">0</span>
+                <span id="deg">°C</span>
+                <button id="unit" onclick="convert()">Fehrenhite!</button>
+            </div>
+            <div class="weather__desc">
+                <span id="desc">Description</span>
+            </div>
+            <div class="weather__icon">
+                <img src="" alt="Weather-Icon" id="wicon">
+            </div>
+        </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
