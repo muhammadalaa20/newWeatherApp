@@ -29,6 +29,7 @@ form.addEventListener('submit', (e) => {
   fetch(url).then(response => response.json()).then(data => description.textContent = data.weather[0].description);
   fetch(url).then(response => response.json()).then(data => weatherIcon.src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`);
   weatherIcon.style.display = 'block';
+  description.style.display = 'block';
   degree.textContent = '°C';
   button.textContent = 'Fehrenhite!';
 });
