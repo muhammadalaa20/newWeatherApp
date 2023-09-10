@@ -30,11 +30,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to top, rgb(146, 51, 51), rgb(255, 255, 255));
+    background-image: linear-gradient(to right top, #212225, #1b1f20, #171b1b, #141715, #11120f);
 }
 
 form{
     font-weight: bold;
+}
+label{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 input{
@@ -58,6 +63,16 @@ button{
 button:hover{
     background-color: rgb(146, 51, 51);
     color: #f3f3f3;
+}
+p{
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.weather__temp span{
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 .weather__desc span{
