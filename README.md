@@ -1,3 +1,3 @@
 # newWeatherApp
 
-https://muhammadalaa20.github.io/newWeatherApp/
+https://weathwebapplication.netlify.app/
