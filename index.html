@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c543f32d04.js" crossorigin="anonymous"></script>
     <title>weather</title>
     <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_3-256.png">
 </head>
@@ -18,8 +19,8 @@
             <div class="weather__city">
                 <form id="city-form">
                 <label for="city">Enter your city name:</label>
-                <input type="text" id="city" name="city" placeholder=".e.g alexandria" autocomplete="off" required>
-                <button type="submit" value="Get Weather">Submit</button>
+                <input type="text" id="city" name="city" style="text-transform: capitalize;" placeholder=".e.g alexandria" autocomplete="off" required>
+                <button type="submit" value="Get Weather"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
                 <p id="result"></p>
             </div>
