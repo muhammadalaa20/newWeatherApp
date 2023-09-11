@@ -46,3 +46,48 @@ function convert(){
   }
 }
 
+let keyWords = ['alexandria',
+                'cairo',
+                'giza',
+                'luxor',
+                'aswan',
+                'hurghada',
+                'paris',
+                'london',
+                'new york',
+                'tokyo',
+                'berlin',
+                'rome',
+                'madrid',
+                'istanbul',
+                'moscow',
+                'dubai',
+                'singapore',
+                'barcelona',
+                'amsterdam',
+                'prague',
+                'washington',
+                'boston',
+]
+
+const inputBox= document.getElementById('city');
+const searchResult= document.querySelector('.search-result');
+
+searchResult.onkeyup = function() {
+  let results = [];
+  let input = inputBox.value;
+  if(input.length){
+    results = keyWords.filter((keyword)=>{
+     return keyword.toLowerCase().includes(input.toLowerCase());
+    });
+    console.log(results); 
+  }
+  display(results);
+};
+
+function display(results){
+  const content= results.map((list)=>{
+    return `<li>${list}</li>`;
+});
+searchResult.innerHTML = `<ul>${content}</ul>`
+};

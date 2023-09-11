@@ -33,20 +33,28 @@
     background-image: linear-gradient(to right top, #212225, #1b1f20, #171b1b, #141715, #11120f);
 }
 
-form{
+#city-form{
     font-weight: bold;
+    width: 600px;
+    margin: 200px auto 0;
+    border-radius: 5px;
+    border:  1px solid #f3f3f3;
+    background-color: #f3f3f3;
 }
-label{
-    color: white;
-    font-weight: bold;
-    font-size: 1.5rem;
+.row{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
 }
 
 input{
-    margin: .5rem;
-    padding: .5rem;
-    border: 1px solid #f3f3f3;
-    border-radius: 5px;
+    flex: 1;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size:  1rem;
+    color: #333 ;
 }
 
 button{
@@ -64,10 +72,28 @@ button:hover{
     background-color: rgb(146, 51, 51);
     color: #f3f3f3;
 }
+
+.search-result ul{
+    border-top: 1px solid #999;
+    padding: 15px 10px;
+
+}
+.search-result ul li{
+    list-style: none;    
+    border-radius: 3px;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+.search-result ul li:hover{
+    background-color: rgb(146, 51, 51);
+    color: #f3f3f3;
+}
 p{
     color: white;
     font-weight: bold;
     font-size: 1rem;
+    margin-top: 1rem;
 }
 .weather__temp span{
     color: white;
