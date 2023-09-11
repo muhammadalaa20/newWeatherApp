@@ -47,3 +47,58 @@ function convert(){
 }
 
 
+
+let keyWords = ['Alexandria',
+                'Cairo',
+                'Giza',
+                'Luxor',
+                'Aswan',
+                'Hurghada',
+                'Paris',
+                'London',
+                'New york',
+                'Tokyo',
+                'Berlin',
+                'Rome',
+                'Madrid',
+                'Istanbul',
+                'Moscow',
+                'Dubai',
+                'Singapore',
+                'Barcelona',
+                'Amsterdam',
+                'Prague',
+                'Washington',
+                'Boston',
+];
+
+const inputBox= document.getElementById('input-box');
+const resultsBox= document.querySelector('.result-box');
+
+inputBox.onkeyup = function() {
+  let result = [];
+  let input = inputBox.value;
+  if(input.length){
+    result = keyWords.filter((keyword)=>{
+     return keyword.toLowerCase().includes(input.toLowerCase());
+    });
+    console.log(result); 
+  }
+  display(result);
+  if(result.length === 0){
+    resultsBox.innerHTML = '';
+  }
+};
+
+function display(result){
+  const content= result.map((list)=>{
+    return '<li onclick=selectInput(this)>'+list+'</li>';
+});
+resultsBox.innerHTML = '<ul>'+content.join('')+'</ul>';
+};
+
+
+function selectInput(list){
+  inputBox.value = list.innerHTML;
+  resultsBox.innerHTML = '';
+}

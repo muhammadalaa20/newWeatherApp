@@ -30,13 +30,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to right top, #212225, #1b1f20, #171b1b, #141715, #11120f);
+    background-color: black;
+}
+.headerimg{
+    height: 300px;
+    width: 600px;
 }
 
 #city-form{
     font-weight: bold;
     width: 600px;
-    margin: 100px auto 0;
+    margin-top: 50px;
     border-radius: 5px;
     border:  1px solid #f3f3f3;
     background-color: #f3f3f3;
@@ -72,23 +76,24 @@ button:hover{
     background-color: rgb(146, 51, 51);
     color: #f3f3f3;
 }
-.search-result{
+.result-box{
     max-height: 300px;
     overflow-y: scroll;
 }
-.search-result ul{
+.result-box ul{
     border-top: 1px solid #999;
     padding: 15px 10px;
 
 }
-.search-result ul li{
-    list-style: none;    
+.result-box ul li{
+    list-style: none;   
+    height: 50px; 
     border-radius: 3px;
     padding: 15px 10px;
     cursor: pointer;
 }
 
-.search-result ul li:hover{
+.result-box ul li:hover{
     background-color: rgb(146, 51, 51);
     color: #f3f3f3;
 }
