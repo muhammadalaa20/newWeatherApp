@@ -21,7 +21,7 @@ const weatherIcon = document.getElementById('wicon');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  const city = document.getElementById('city').value; 
+  const city = document.getElementById('input-box').value; 
     result.textContent=`You searched for: ${city}`
   form.reset();
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3cb937893a4d8a713e99c4b3e5453b9c`
@@ -46,48 +46,4 @@ function convert(){
   }
 }
 
-let keyWords = ['alexandria',
-                'cairo',
-                'giza',
-                'luxor',
-                'aswan',
-                'hurghada',
-                'paris',
-                'london',
-                'new york',
-                'tokyo',
-                'berlin',
-                'rome',
-                'madrid',
-                'istanbul',
-                'moscow',
-                'dubai',
-                'singapore',
-                'barcelona',
-                'amsterdam',
-                'prague',
-                'washington',
-                'boston',
-]
 
-const inputBox= document.getElementById('city');
-const searchResult= document.querySelector('.search-result');
-
-searchResult.onkeyup = function() {
-  let results = [];
-  let input = inputBox.value;
-  if(input.length){
-    results = keyWords.filter((keyword)=>{
-     return keyword.toLowerCase().includes(input.toLowerCase());
-    });
-    console.log(results); 
-  }
-  display(results);
-};
-
-function display(results){
-  const content= results.map((list)=>{
-    return `<li>${list}</li>`;
-});
-searchResult.innerHTML = `<ul>${content}</ul>`
-};
